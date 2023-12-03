@@ -260,6 +260,8 @@ img {
   opacity: 0;
   -webkit-animation: fadeIn 3s ease 4s forwards;
           animation: fadeIn 3s ease 4s forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
   position: fixed;
 }
 .l-header.is-dark .l-header__inner {
@@ -401,6 +403,8 @@ img {
   opacity: 0;
   -webkit-animation: fadeIn 2s ease 0s forwards;
           animation: fadeIn 2s ease 0s forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
   transform: translateY(-5.3333vw);
 }
 
@@ -648,6 +652,8 @@ body.is-menu-opening {
   opacity: 0;
   -webkit-animation: fadeIn 3s ease 3s forwards;
           animation: fadeIn 3s ease 3s forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 @media screen and (min-width: 768px) {
   .p-visual__content {
@@ -896,6 +902,15 @@ body.is-menu-opening {
   }
 }
 
+.loaded .js-animation-in {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.js-animation-in {
+  opacity: 0;
+}
+
 .js-fade-out {
   opacity: 0;
   transform: translateX(-100px);
@@ -918,12 +933,18 @@ a {
 }
 
 @-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -2960,5 +2981,3 @@ a {
     margin-top: 2.6667vw;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

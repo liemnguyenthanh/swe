@@ -7035,7 +7035,7 @@ var handleAccordions = function handleAccordions() {
 
 exports.handleAccordions = handleAccordions;
 
-},{"../selectors":155,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/web.dom-collections.for-each.js":139,"core-js/modules/web.timers.js":140}],143:[function(require,module,exports){
+},{"../selectors":154,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/web.dom-collections.for-each.js":139,"core-js/modules/web.timers.js":140}],143:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/es.object.define-property.js");
@@ -7351,7 +7351,7 @@ function _playPageIntro() {
   return _playPageIntro.apply(this, arguments);
 }
 
-},{"../selectors":155,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.promise.js":135,"core-js/modules/web.timers.js":140,"regenerator-runtime/runtime.js":141}],147:[function(require,module,exports){
+},{"../selectors":154,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.promise.js":135,"core-js/modules/web.timers.js":140,"regenerator-runtime/runtime.js":141}],147:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/es.object.define-property.js");
@@ -7428,7 +7428,7 @@ function onHandleResponsiveLink() {
   mobileMatchMedia.addEventListener('change', handleResponsiveLink);
 }
 
-},{"../constants":150,"../selectors":155,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.array.includes.js":131,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.regexp.exec.js":136,"core-js/modules/es.string.includes.js":137,"core-js/modules/es.string.replace.js":138,"core-js/modules/web.dom-collections.for-each.js":139}],148:[function(require,module,exports){
+},{"../constants":150,"../selectors":154,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.array.includes.js":131,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.regexp.exec.js":136,"core-js/modules/es.string.includes.js":137,"core-js/modules/es.string.replace.js":138,"core-js/modules/web.dom-collections.for-each.js":139}],148:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/es.object.define-property.js");
@@ -7581,7 +7581,7 @@ function TranslateOnScroll() {
   });
 }
 
-},{"../selectors":155,"../utils":156,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.parse-int.js":134,"core-js/modules/web.dom-collections.for-each.js":139}],150:[function(require,module,exports){
+},{"../selectors":154,"../utils":155,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.parse-int.js":134,"core-js/modules/web.dom-collections.for-each.js":139}],150:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/es.object.define-property.js");
@@ -7900,7 +7900,7 @@ function _FadeTopSP() {
   return _FadeTopSP.apply(this, arguments);
 }
 
-},{"./utils":156,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.parse-int.js":134,"core-js/modules/es.promise.js":135,"core-js/modules/web.dom-collections.for-each.js":139,"core-js/modules/web.timers.js":140,"regenerator-runtime/runtime.js":141}],152:[function(require,module,exports){
+},{"./utils":155,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.parse-int.js":134,"core-js/modules/es.promise.js":135,"core-js/modules/web.dom-collections.for-each.js":139,"core-js/modules/web.timers.js":140,"regenerator-runtime/runtime.js":141}],152:[function(require,module,exports){
 "use strict";
 
 var _responsiveLink = require("./components/responsive-link");
@@ -7921,61 +7921,45 @@ var _anchorLink = require("./components/anchor-link");
 
 var _fadeTop = require("./fade-top");
 
-var _loading = require("./loading");
-
-document.addEventListener('DOMContentLoaded', function () {
-  (0, _responsiveLink.onHandleResponsiveLink)(), (0, _accordion.handleAccordions)(), (0, _modal.handleModal)(), (0, _slider.handleSlider)(), (0, _anchorLink.handleScrollToElement)(), (0, _fadeTop.FadeTop)();
+var init = function init() {
+  (0, _responsiveLink.onHandleResponsiveLink)();
+  (0, _accordion.handleAccordions)();
+  (0, _modal.handleModal)();
+  (0, _slider.handleSlider)();
+  (0, _anchorLink.handleScrollToElement)();
+  (0, _fadeTop.FadeTop)();
   (0, _fadeTop.FadeTopSP)();
   (0, _header.Header)();
   (0, _translateScroll.TranslateOnScroll)();
   (0, _top.TopPageEvent)();
-});
+};
+
 window.addEventListener('load', function () {
-  (0, _loading.handleHiddenLoading)();
-});
-
-},{"./components/accordion":142,"./components/anchor-link":143,"./components/header":144,"./components/modal":145,"./components/responsive-link":147,"./components/slider":148,"./components/translate-scroll":149,"./fade-top":151,"./loading":153,"./pages/top":154}],153:[function(require,module,exports){
-"use strict";
-
-require("core-js/modules/es.object.define-property.js");
-
-require("core-js/modules/es.object.define-property.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.handleHiddenLoading = void 0;
-
-var handleHiddenLoading = function handleHiddenLoading() {
+  //waiting load file
   document.documentElement.style.overflow = 'visible';
   var loading = document.querySelector('.js-loading');
+  var body = document.querySelector('body');
 
   if (loading) {
     loading.style.opacity = '0';
     loading.style.visibility = 'hidden';
+    body.classList.add('loaded');
+    init();
   }
-};
+});
 
-exports.handleHiddenLoading = handleHiddenLoading;
-
-},{"core-js/modules/es.object.define-property.js":132}],154:[function(require,module,exports){
+},{"./components/accordion":142,"./components/anchor-link":143,"./components/header":144,"./components/modal":145,"./components/responsive-link":147,"./components/slider":148,"./components/translate-scroll":149,"./fade-top":151,"./pages/top":153}],153:[function(require,module,exports){
 "use strict";
-
-require("regenerator-runtime/runtime.js");
 
 require("core-js/modules/es.object.define-property.js");
 
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
 require("core-js/modules/es.array.for-each.js");
+
+require("core-js/modules/es.object.to-string.js");
 
 require("core-js/modules/web.dom-collections.for-each.js");
 
 require("core-js/modules/web.timers.js");
-
-require("core-js/modules/es.promise.js");
 
 require("core-js/modules/es.object.define-property.js");
 
@@ -7983,8 +7967,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TopPageEvent = TopPageEvent;
-
-require("regenerator-runtime/runtime.js");
 
 require("core-js/modules/es.array.for-each.js");
 
@@ -8003,42 +7985,6 @@ var _constants = require("../constants");
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
     "default": obj
-  };
-}
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
   };
 }
 
@@ -8063,24 +8009,11 @@ function TopPageEvent() {
   var visualSection = document.querySelector('#visual-section');
   var visualSectionBottom = visualSection.offsetHeight;
   var initVideoPosition = video.getBoundingClientRect().top;
-  video.addEventListener('canplay', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            (0, _pageIntro.playPageIntro)();
-            setTimeout(function () {
-              video.play();
-              video.setAttribute('autoplay', true);
-            }, 1000);
-
-          case 2:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  })));
+  (0, _pageIntro.playPageIntro)();
+  setTimeout(function () {
+    video.play();
+    video.setAttribute('autoplay', true);
+  }, 1000);
 
   function setVideoPosition() {
     if (window.innerWidth > _constants.breakPoint.md) return;
@@ -8117,7 +8050,7 @@ function TopPageEvent() {
   } catch (_unused) {}
 }
 
-},{"../components/page-intro":146,"../constants":150,"@splidejs/splide":1,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/es.promise.js":135,"core-js/modules/web.dom-collections.for-each.js":139,"core-js/modules/web.timers.js":140,"regenerator-runtime/runtime.js":141}],155:[function(require,module,exports){
+},{"../components/page-intro":146,"../constants":150,"@splidejs/splide":1,"core-js/modules/es.array.for-each.js":130,"core-js/modules/es.object.define-property.js":132,"core-js/modules/es.object.to-string.js":133,"core-js/modules/web.dom-collections.for-each.js":139,"core-js/modules/web.timers.js":140}],154:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/es.object.define-property.js");
@@ -8141,7 +8074,7 @@ var selectors = {
 var _default = selectors;
 exports["default"] = _default;
 
-},{"core-js/modules/es.object.define-property.js":132}],156:[function(require,module,exports){
+},{"core-js/modules/es.object.define-property.js":132}],155:[function(require,module,exports){
 "use strict";
 
 require("regenerator-runtime/runtime.js");
