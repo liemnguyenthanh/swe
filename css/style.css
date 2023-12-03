@@ -403,8 +403,6 @@ img {
   opacity: 0;
   -webkit-animation: fadeIn 2s ease 0s forwards;
           animation: fadeIn 2s ease 0s forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
   transform: translateY(-5.3333vw);
 }
 
@@ -902,13 +900,9 @@ body.is-menu-opening {
   }
 }
 
-.loaded .js-animation-in {
+.loaded .js-animation-running {
   -webkit-animation-play-state: running;
           animation-play-state: running;
-}
-
-.js-animation-in {
-  opacity: 0;
 }
 
 .js-fade-out {
@@ -933,18 +927,12 @@ a {
 }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
@@ -2981,3 +2969,5 @@ a {
     margin-top: 2.6667vw;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

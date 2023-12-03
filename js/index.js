@@ -7935,7 +7935,7 @@ var init = function init() {
 };
 
 window.addEventListener('load', function () {
-  //waiting load file
+  //waiting load file(image, video ...)
   document.documentElement.style.overflow = 'visible';
   var loading = document.querySelector('.js-loading');
   var body = document.querySelector('body');
