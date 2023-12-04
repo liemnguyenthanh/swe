@@ -24,7 +24,7 @@
   <!-- Page background -->
   <div class="p-main-video-content">
     <div class="p-main-video-wrapper" id="main-video-wrapper">
-      <video class="p-main-video" loop="true" muted="" id="main-video">
+      <video class="p-main-video" loop="true" muted="" preload="true" playsinline="true" id="main-video" poster="/images/video-thumbnail.webp">
         <source src="/images/varon.mp4" type="video/mp4">
       </video>
     </div>
@@ -125,7 +125,9 @@
       <img src="/images/top/concept-img-01-sp.webp" alt="varon concept" data-media="sp">
     </figure>
 
-    <h2 class="p-concept__title js-fade-up">CONCEPT</h2>
+    <h2 class="p-concept__title js-fade-up">
+      CONCEPT
+    </h2>
   </div>
 
   <div class="p-concept__container">
@@ -140,45 +142,81 @@
       <div class="p-concept__bottom-right">
         <img class="p-concept__img-3 js-fade-up" src="/images/top/concept-img-03.svg" alt="concept-img-03" data-media="pc">
         <img class="p-concept__img-4 js-fade-up" src="/images/top/concept-img-04.svg" alt="concept-img-04" data-media="pc">
-        <img class="p-concept__img-5 js-fade-up" src="/images/top/concept-img-05.svg" alt="concept-img-05" data-media="pc">
-
+        <p class="p-concept__text js-fade-up" data-media="pc">今の時代をさりげなく着こなす男性のためのブランドTAKEO KIKUCHI。<br>サントリーとはウイスキーのコラボアイテムを手がけるなど、<br>深い関係が築かれてきました。<br>また、創立者であるデザイナーの菊池武夫氏自身もVARONの愛用者。<br>紳士のたしなみとしての顔磨きをサポートするVARONと、<br>TAKEO KIKUCHIが体現する世界観は響き合う部分も多く、<br>この特別なコラボレーションが誕生しました。</p>
         <img class="p-concept__img-3 js-fade-up" src="/images/top/concept-img-03-sp.svg" alt="concept-img-03" data-media="sp">
         <img class="p-concept__img-4 js-fade-up" src="/images/top/concept-img-04-sp.svg" alt="concept-img-04" data-media="sp">
-        <img class="p-concept__img-5 js-fade-up" src="/images/top/concept-img-05-sp.svg" alt="concept-img-05" data-media="sp">
+        <p class="p-concept__text js-fade-up" data-media="sp">今の時代をさりげなく着こなす男性のためのブランドTAKEO KIKUCHI。サントリーとはウイスキーのコラボアイテムを手がけるなど、深い関係が築かれてきました。また、創立者であるデザイナーの菊池武夫氏自身もVARONの愛用者。紳士のたしなみとしての顔磨きをサポートするVARONと、TAKEO KIKUCHIが体現する世界観は響き合う部分も多く、この特別なコラボレーションが誕生しました。</p>
       </div>
     </div>
   </div>
 
-  <div class="p-concept__products" id="product-sliders">
-    <div class="p-concept__product-slide js-translate-scroll" data-translate-scroll='{"direction": "top", "disableSP": true}'>
-      <div class="splide js-concept-product-splide js-fade-up-sp">
+  <div class="p-concept__products" data-media="pc">
+    <div class="p-concept__product-slide js-product-slider-1">
+      <div class="splide js-concept-product-splide">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="/images/top/concept-product-01.webp" alt="Varon Product">
+              <img src="/images/top/concept-product-01.webp" alt="Varon Product" class="p-concept__product-image">
             </li>
             <li class="splide__slide">
-              <img src="/images/top/concept-product-02.webp" alt="Varon Product">
+              <img src="/images/top/concept-product-02.webp" alt="Varon Product" class="p-concept__product-image">
             </li>
             <li class="splide__slide">
-              <img src="/images/top/concept-product-03.webp" alt="Varon Product">
+              <img src="/images/top/concept-product-03.webp" alt="Varon Product" class="p-concept__product-image">
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="p-concept__product-slide js-translate-scroll" data-translate-scroll='{"direction": "bottom", "disableSP": true}'>
-      <div class="splide js-concept-product-splide js-fade-up-sp">
+    <div class="p-concept__product-slide js-product-slider-2">
+      <div class="splide js-concept-product-splide">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="/images/top/concept-product-04.webp" alt="Varon Product">
+              <img src="/images/top/concept-product-04.webp" alt="Varon Product" class="p-concept__product-image">
             </li>
             <li class="splide__slide">
-              <img src="/images/top/concept-product-05.webp" alt="Varon Product">
+              <img src="/images/top/concept-product-05.webp" alt="Varon Product" class="p-concept__product-image">
             </li>
             <li class="splide__slide">
-              <img src="/images/top/concept-product-06.webp" alt="Varon Product">
+              <img src="/images/top/concept-product-06.webp" alt="Varon Product" class="p-concept__product-image">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-concept__products" data-media="sp">
+    <div class="p-concept__product-slide js-fade-up">
+      <div class="splide js-concept-product-splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="/images/top/concept-product-01-sp.webp" alt="Varon Product" class="p-concept__product-image">
+            </li>
+            <li class="splide__slide">
+              <img src="/images/top/concept-product-02-sp.webp" alt="Varon Product" class="p-concept__product-image">
+            </li>
+            <li class="splide__slide">
+              <img src="/images/top/concept-product-03-sp.webp" alt="Varon Product" class="p-concept__product-image">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="p-concept__product-slide js-fade-up">
+      <div class="splide js-concept-product-splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="/images/top/concept-product-04-sp.webp" alt="Varon Product" class="p-concept__product-image">
+            </li>
+            <li class="splide__slide">
+              <img src="/images/top/concept-product-05-sp.webp" alt="Varon Product" class="p-concept__product-image">
+            </li>
+            <li class="splide__slide">
+              <img src="/images/top/concept-product-06-sp.webp" alt="Varon Product" class="p-concept__product-image">
             </li>
           </ul>
         </div>
@@ -188,27 +226,22 @@
 
   <div class="p-concept__box">
     <div class="p-concept__box-left">
-      <figure class="p-concept__box-img-2 js-translate-scroll" data-translate-scroll='{"direction": "right", "span": 40}' data-media="pc">
-        <img class="js-fade-up" alt="Concept box" src="/images/top/concept-box-img-02.webp">
-      </figure>
-      <figure class="p-concept__box-img-2 js-translate-scroll" data-translate-scroll='{"direction": "right", "span": 20}' data-media="sp">
-        <img class="js-fade-up" alt="Concept box" src="/images/top/concept-box-img-02.webp">
-      </figure>
-      <figure class="p-concept__box-img-3 js-translate-scroll" data-translate-scroll='{"direction": "top", "span": 300}' data-media="sp">
-        <img class="js-fade-up" alt="Concept box" src="/images/top/concept-box-img-03.webp">
-      </figure>
-
-      <figure class="p-concept__box-img-3 js-translate-scroll" data-translate-scroll='{"direction": "top", "span": 200, "ratio": 5}' data-media="pc">
-        <img class="js-fade-up" alt="Concept box" src="/images/top/concept-box-img-03.webp">
-      </figure>
+      <div class="p-concept__box-left-content">
+        <figure class="p-concept__box-img-2 js-concept-translate-img-1">
+          <img class="js-fade-up" alt="Concept box" src="/images/top/concept-box-img-02.webp">
+        </figure>
+        <figure class="p-concept__box-img-3 js-concept-translate-img-2">
+          <img class="js-fade-up" alt="Concept box" src="/images/top/concept-box-img-03.webp">
+        </figure>
+      </div>
     </div>
     <div class="p-concept__box-right">
       <img class="p-concept__box-img-1 js-fade-up" alt="Concept box" src="/images/top/concept-box-img-01.svg" data-media="pc">
       <img class="p-concept__box-img-1 js-fade-up" alt="Concept box" src="/images/top/concept-box-img-01-sp.svg" data-media="sp">
       <div class="js-fade-up">
-        <p class="p-concept__box-text">今回のコラボレーションでは、<br data-media="pc">サントリー独自開発の3ステップ浸透※技術でお肌をケアする<br data-media="pc">オールインワンスキンケアVALONと、<br> TAKEO KIKUCHIのスペシャルアイテムがセットに。<br data-media="pc">アイテムはカードケースとネクタイで、<br>いずれもVALON のコンセプトやボトルの意匠から<br data-media="pc">インスパイアされたオリジナルデザイン。<br>カードケースとネクタイ、それぞれのセットを収めるBOXには、<br data-media="pc">菊池武夫氏の一筆アートグラフィックが箔押しされ、<br data-media="pc">特別感のある仕様です。</p>
+        <p class="p-concept__text p-concept__text--mt">今回のコラボレーションでは、<br data-media="pc">サントリー独自開発の3ステップ浸透<span class="p-small-stat">※</span>技術でお肌をケアする<br data-media="pc">オールインワンスキンケアVALONと、<br> TAKEO KIKUCHIのスペシャルアイテムがセットに。<br data-media="pc">アイテムはカードケースとネクタイで、<br>いずれもVALON のコンセプトやボトルの意匠から<br data-media="pc">インスパイアされたオリジナルデザイン。<br>カードケースとネクタイ、それぞれのセットを収めるBOXには、<br data-media="pc">菊池武夫氏の一筆アートグラフィックが箔押しされ、<br data-media="pc">特別感のある仕様です。</p>
         <p class="p-concept__box-note">
-          ※独自の3層構造により成分を3段階で角層に届けること
+          <span>※</span>独自の3層構造により成分を3段階で角層に届けること
         </p>
       </div>
     </div>
@@ -784,7 +817,7 @@
         <span class="varon-note__text">独自の3層構造により成分を3段階で角層に届けること</span>
       </div>
       <div class="varon-action">
-        <a href="#store" class="special-box-btn">
+        <a href="https://www.suntory-kenko.com/contents/brands/varon/?key=400000591" class="special-box-btn special-box-btn--02">
           ご購入はこちら
         </a>
       </div>

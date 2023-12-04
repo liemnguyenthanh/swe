@@ -1399,9 +1399,6 @@ function Header() {
   var headerMenuButton = document.querySelector('.js-header-menu-button');
   var headerMenuLinks = document.querySelector('.js-header-menu').querySelectorAll('a');
   header.classList.toggle('is-dark', window.scrollY > 0);
-  window.addEventListener('scroll', function () {
-    header.classList.toggle('is-dark', window.scrollY > 0);
-  });
 
   function openMenu() {
     header.classList.add('is-menu-opening');

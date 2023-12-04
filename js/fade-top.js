@@ -3296,30 +3296,6 @@ try {
 },{}],120:[function(require,module,exports){
 "use strict";
 
-require("core-js/modules/es.object.define-property.js");
-
-require("core-js/modules/es.object.define-property.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.breakpointUp = exports.breakpointDown = exports.breakPoint = void 0;
-var breakpointUp = {
-  md: 'screen and (min-width: 768px)'
-};
-exports.breakpointUp = breakpointUp;
-var breakpointDown = {
-  md: 'screen and (max-width: 767px)'
-};
-exports.breakpointDown = breakpointDown;
-var breakPoint = {
-  md: 768
-};
-exports.breakPoint = breakPoint;
-
-},{"core-js/modules/es.object.define-property.js":113}],121:[function(require,module,exports){
-"use strict";
-
 require("regenerator-runtime/runtime.js");
 
 require("core-js/modules/es.object.define-property.js");
@@ -3342,7 +3318,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.FadeTop = FadeTop;
-exports.FadeTopSP = FadeTopSP;
 exports.sleep = void 0;
 
 require("regenerator-runtime/runtime.js");
@@ -3358,8 +3333,6 @@ require("core-js/modules/es.array.for-each.js");
 require("core-js/modules/web.dom-collections.for-each.js");
 
 require("core-js/modules/es.parse-int.js");
-
-var _utils = require("./utils");
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
   try {
@@ -3467,7 +3440,7 @@ function _FadeTop() {
                           }
 
                           delay = parseInt(entry.target.getAttribute('delay') || '0');
-                          duration = parseInt(entry.target.getAttribute('duration') || '1000');
+                          duration = parseInt(entry.target.getAttribute('duration') || '700');
 
                           if (!(delay > 0)) {
                             _context2.next = 9;
@@ -3518,203 +3491,5 @@ function _FadeTop() {
   return _FadeTop.apply(this, arguments);
 }
 
-function FadeTopSP() {
-  return _FadeTopSP.apply(this, arguments);
-}
-
-function _FadeTopSP() {
-  _FadeTopSP = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
-    var elements, observer;
-    return regeneratorRuntime.wrap(function _callee5$(_context5) {
-      while (1) {
-        switch (_context5.prev = _context5.next) {
-          case 0:
-            elements = document.querySelectorAll(['.js-fade-up-sp', '.js-fade-out-sp']);
-            observer = new IntersectionObserver(function (entries) {
-              entries.forEach( /*#__PURE__*/function () {
-                var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(entry) {
-                  var targetRect, isAboveViewport, delay, duration;
-                  return regeneratorRuntime.wrap(function _callee4$(_context4) {
-                    while (1) {
-                      switch (_context4.prev = _context4.next) {
-                        case 0:
-                          if ((0, _utils.isSP)()) {
-                            _context4.next = 2;
-                            break;
-                          }
-
-                          return _context4.abrupt("return");
-
-                        case 2:
-                          targetRect = entry.target.getBoundingClientRect();
-                          isAboveViewport = targetRect.bottom < 0; // unobserve items which above viewport
-
-                          if (isAboveViewport) {
-                            entry.target.classList.remove('js-fade-up-sp', 'js-fade-out-sp');
-                            observer.unobserve(entry.target);
-                          } // add Fade
-
-
-                          if (!entry.isIntersecting) {
-                            _context4.next = 16;
-                            break;
-                          }
-
-                          delay = parseInt(entry.target.getAttribute('delay') || '0');
-                          duration = parseInt(entry.target.getAttribute('duration') || '1000');
-
-                          if (!(delay > 0)) {
-                            _context4.next = 11;
-                            break;
-                          }
-
-                          _context4.next = 11;
-                          return sleep(delay);
-
-                        case 11:
-                          entry.target.style.transitionDuration = duration + 'ms';
-                          entry.target.style.transitionProperty = 'opacity, transform';
-                          entry.target.style.opacity = '1';
-                          entry.target.style.transform = 'translate(0)';
-                          observer.unobserve(entry.target);
-
-                        case 16:
-                        case "end":
-                          return _context4.stop();
-                      }
-                    }
-                  }, _callee4);
-                }));
-
-                return function (_x2) {
-                  return _ref3.apply(this, arguments);
-                };
-              }());
-            }, {
-              threshold: 0.1
-            }); // await reload the page is done with html, css
-
-            _context5.next = 4;
-            return sleep(100);
-
-          case 4:
-            elements.forEach(function (element) {
-              observer.observe(element);
-            });
-
-          case 5:
-          case "end":
-            return _context5.stop();
-        }
-      }
-    }, _callee5);
-  }));
-  return _FadeTopSP.apply(this, arguments);
-}
-
-},{"./utils":122,"core-js/modules/es.array.for-each.js":112,"core-js/modules/es.object.define-property.js":113,"core-js/modules/es.object.to-string.js":114,"core-js/modules/es.parse-int.js":115,"core-js/modules/es.promise.js":116,"core-js/modules/web.dom-collections.for-each.js":117,"core-js/modules/web.timers.js":118,"regenerator-runtime/runtime.js":119}],122:[function(require,module,exports){
-"use strict";
-
-require("regenerator-runtime/runtime.js");
-
-require("core-js/modules/es.object.define-property.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/web.timers.js");
-
-require("core-js/modules/es.object.define-property.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.sleep = exports.isSP = void 0;
-
-require("regenerator-runtime/runtime.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.promise.js");
-
-require("core-js/modules/web.timers.js");
-
-var _constants = require("./constants");
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
-
-var sleep = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var delay,
-        _args = arguments;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            delay = _args.length > 0 && _args[0] !== undefined ? _args[0] : 800;
-            _context.next = 3;
-            return new Promise(function (r) {
-              return setTimeout(r, delay);
-            });
-
-          case 3:
-            return _context.abrupt("return", _context.sent);
-
-          case 4:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function sleep() {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-exports.sleep = sleep;
-
-var isSP = function isSP() {
-  return window.innerWidth < _constants.breakPoint.md;
-};
-
-exports.isSP = isSP;
-
-},{"./constants":120,"core-js/modules/es.object.define-property.js":113,"core-js/modules/es.object.to-string.js":114,"core-js/modules/es.promise.js":116,"core-js/modules/web.timers.js":118,"regenerator-runtime/runtime.js":119}]},{},[121])
+},{"core-js/modules/es.array.for-each.js":112,"core-js/modules/es.object.define-property.js":113,"core-js/modules/es.object.to-string.js":114,"core-js/modules/es.parse-int.js":115,"core-js/modules/es.promise.js":116,"core-js/modules/web.dom-collections.for-each.js":117,"core-js/modules/web.timers.js":118,"regenerator-runtime/runtime.js":119}]},{},[120])
 //# sourceMappingURL=fade-top.js.map
