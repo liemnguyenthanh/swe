@@ -3440,7 +3440,7 @@ function _FadeTop() {
                           }
 
                           delay = parseInt(entry.target.getAttribute('delay') || '0');
-                          duration = parseInt(entry.target.getAttribute('duration') || '700');
+                          duration = parseInt(entry.target.getAttribute('duration') || '1300');
 
                           if (!(delay > 0)) {
                             _context2.next = 9;
